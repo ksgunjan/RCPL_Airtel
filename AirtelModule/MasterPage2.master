@@ -1,0 +1,312 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage2.master.cs"
+    Inherits="MasterPage2" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images/favicon.ico" type="image/ico" />
+    <!-- Bootstrap -->
+    <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- Font Awesome -->
+    <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="build/css/custom.min.css" rel="stylesheet" type="text/css" />
+    <link href="vendors/bootstrap/dist/css/aaryancss.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <script type="text/javascript">
+        function showPopup() {
+            $('#myModal').modal('show');
+        }
+    </script>
+</head>
+<body class="nav-md">
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="sc" runat="server" EnablePartialRendering="true">
+    </asp:ScriptManager>
+    <div>
+        <div class="container body">
+            <div class="main_container">
+                <div class="col-md-3 left_col">
+                    <div class="left_col scroll-view">
+                        <!-- menu profile quick info -->
+                        <div class="profile clearfix">
+                            <div class="profile_pic">
+                                <img id="a" runat="server" src="" alt="..." class="img-circle profile_img">
+                            </div>
+                            <div class="profile_info">
+                                <h2 class="h4" runat="server" id="name">
+                                </h2>
+                                <h3 runat="server" id="category">
+                                </h3>
+                            </div>
+                        </div>
+                        <!-- /menu profile quick info -->
+                        <br />
+                        <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                            <div class="menu_section">
+                                <h3 runat="server" id="divformname">
+                                </h3>
+                                <ul class="nav side-menu">
+                                    <li><a runat="server" id="homelink"><i class="fa fa-home"></i>Home</a></li>
+                                    <li runat="server" id="onlymanagerdashboard"><a><i class="fa fa-dashboard"></i>DashBoards
+                                        <span class="fa fa-chevron-down"></span></a>
+                                        <ul class="nav child_menu">
+                                            <li><a href='<%=ResolveUrl("~/Manager-DashBoard") %>'>Leased Line</a></li>
+                                            <li><a href='<%=ResolveUrl("~/Manager-DashBoard-MO") %>'>MO DashBoard </a></li>
+                                            <li><a href='<%=ResolveUrl("~/Manager-DashBoard-PRI") %>'>PRI Dashboard </a></li>
+                                        </ul>
+                                    </li>
+                                    <li runat="server" id="menucompany"><a><i class="fa fa-industry"></i>Master Company
+                                        <span class="fa fa-chevron-down"></span></a>
+                                        <ul class="nav child_menu">
+                                            <li><a href='<%=ResolveUrl("~/Add-Company") %>'>Add Company</a></li>
+                                            <li><a href='<%=ResolveUrl("~/View-Company") %>'>View Company</a></li>
+                                        </ul>
+                                    </li>
+                                    <li runat="server" id="menuemail"><a><i class="fa fa-mail-forward"></i>Master Email<span
+                                        class="fa fa-chevron-down"></span> </a>
+                                        <ul class="nav child_menu">
+                                            <li runat="server" id="email1"><a href='<%=ResolveUrl("~/Add-Email") %>'>Add Email</a></li>
+                                            <li runat="server" id="email2"><a href='<%=ResolveUrl("~/View-Email") %>'>View Email</a></li>
+                                            <li runat="server" id="email3"><a href='<%=ResolveUrl("~/Master-Email") %>'>Resend Mail
+                                                to<br />
+                                                Client or Other</a></li>
+                                            <li runat="server" id="blkemail">
+                                                <asp:LinkButton ID="btnbulkmailorsms" runat="server" OnClick="btnbulkmailorsms_Click">
+                                                    Bulk SMS/Email</asp:LinkButton>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li runat="server" id="menuproduct"><a><i class="fa fa-product-hunt"></i>Master Product<span
+                                        class="fa fa-chevron-down"></span></a>
+                                        <ul class="nav child_menu">
+                                            <li><a href='<%=ResolveUrl("~/Add-Product") %>'>Add Product</a></li>
+                                            <li><a href='<%=ResolveUrl("~/View-Product") %>'>View Product</a></li>
+                                            <li><a href='<%=ResolveUrl("~/Add-ProductType") %>'>Add Product Type</a></li>
+                                            <li><a href='<%=ResolveUrl("~/View-ProductType") %>'>View Product Type</a></li>
+                                        </ul>
+                                    </li>
+                                    <li runat="server" id="menuzone"><a><i class="fa fa-location-arrow"></i>Master Zone<span
+                                        class="fa fa-chevron-down"> </span></a>
+                                        <ul class="nav child_menu">
+                                            <li><a href='<%=ResolveUrl("~/Add-Zone") %>'>Add Zone</a></li>
+                                            <li><a href='<%=ResolveUrl("~/View-Zone") %>'>View Zone</a></li>
+                                            <li><a href='<%=ResolveUrl("~/Add-ZoneArea") %>'>Add Zone Area</a></li>
+                                            <li><a href='<%=ResolveUrl("~/View-ZoneArea") %>'>View Zone Area</a></li>
+                                            <li><a href='<%=ResolveUrl("~/Add-ZoneMapping") %>'>Zone Mapping</a></li>
+                                            <li><a href='<%=ResolveUrl("~/View-ZoneMapping") %>'>View Mapped Zone</a></li>
+                                        </ul>
+                                    </li>
+                                    <li runat="server" id="menuexceladmin"><a><i class="fa fa-database"></i>Approve Excel
+                                        <br />
+                                        Raw Data <span class="fa fa-chevron-down"></span></a>
+                                        <ul class="nav child_menu">
+                                            <li runat="server" id="innermenuapproveexcel"><a href='<%=ResolveUrl("~/Approve-Upload-Excel") %>'>
+                                                Approve upload excel Raw Data</a></li>
+                                            <li><a href='<%=ResolveUrl("~/ViewUpload-Excel") %>'>View Raw Data</a></li>
+                                        </ul>
+                                    </li>
+                                    <li runat="server" id="menuexcelmanager"><a><i class="fa fa-database"></i>Excel Raw
+                                        Data <span class="fa fa-chevron-down"></span></a>
+                                        <ul class="nav child_menu">
+                                            <li><a href='<%=ResolveUrl("~/Upload-Excel") %>'>Upload Excel Raw Data</a></li>
+                                            <li><a href='<%=ResolveUrl("~/UnApproveUpload-Excel") %>'>View Upload Raw
+                                                <br />
+                                                Data (UnApproved) </a></li>
+                                            <li><a href='<%=ResolveUrl("~/ViewUpload-Excel") %>'>View Approved Raw Data </a>
+                                            </li>
+                                            <li><a href='<%=ResolveUrl("~/Not-Eligible-Mail") %>'>Not Eligible Data</a> </li>
+                                        </ul>
+                                    </li>
+                                    <li runat="server" id="menuuser"><a><i class="fa fa-user-plus"></i>Master User<span
+                                        class="fa fa-chevron-down"></span> </a>
+                                        <ul class="nav child_menu">
+                                            <li><a href='<%=ResolveUrl("~/Add-UserCategory") %>'>Add User Category</a></li>
+                                            <li><a href='<%=ResolveUrl("~/View-UserCategory") %>'>View User Category</a></li>
+                                            <li><a href='<%=ResolveUrl("~/Add-New-User") %>'>Add User</a></li>
+                                            <li><a href='<%=ResolveUrl("~/View-AddUser") %>'>View User</a></li>
+                                        </ul>
+                                    </li>
+                                    <li runat="server" id="menufe"><a><i class="fa fa-users"></i>FE Section <span class="fa fa-chevron-down">
+                                    </span></a>
+                                        <ul class="nav child_menu">
+                                            <li runat="server" id="menufefejob"><a href='<%=ResolveUrl("~/FE-Job") %>'>View Assigned
+                                                Job Leased Line</a> </li>
+                                            <li><a href='<%=ResolveUrl("~/Fe-JobMobility") %>'>View Assigned Job Mobility</a></li>
+                                            <li><a href='<%=ResolveUrl("~/Fe-JobPRI") %>'>View Assigned Job PRI</a></li>
+                                            <li id="historyferecord" runat="server"><a href='<%=ResolveUrl("~/View-History-FERecord") %>'>
+                                                Case History</a></li>
+                                            <li runat="server" id="fepassword"><a href='<%=ResolveUrl("~/ChangePassword") %>'>Change
+                                                Password</a> </li>
+                                            <li runat="server" id="Li1"><a href='<%=ResolveUrl("~/Test") %>'>Change Test</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li runat="server" id="menumanagerfe"><a><i class="fa fa-male"></i>Manager Section<span
+                                        class="fa fa-chevron-down"> </span></a>
+                                        <ul class="nav child_menu">
+                                            <li><a href='<%=ResolveUrl("~/Manager-Assign-FE-Job") %>'>Assign-Job to FE Leased-Line</a></li>
+                                            <li><a href='<%=ResolveUrl("~/AssignJob-FeByManager-Mobility") %>'>Assign-Job to FE
+                                                MO</a></li>
+                                            <li><a href='<%=ResolveUrl("~/AssignJob-FeByManager-PRI") %>'>Assign-Job to FE PRI</a></li>
+                                            <li><a href='<%=ResolveUrl("~/Fe-JobHistory-Report") %>'>FE-Job History</a></li>
+                                            <li><a href='<%=ResolveUrl("~/UpdateStatus-ByManager") %>'>Update Document
+                                                <br />
+                                                Status By Manager</a></li>
+                                        </ul>
+                                    </li>
+                                    <li runat="server" id="rescheduled"><a><i class="fa fa-male"></i>Reschedule Section<span
+                                        class="fa fa-chevron-down"> </span></a>
+                                        <ul class="nav child_menu">
+                                            <li><a href='<%=ResolveUrl("~/Assign-Reschedule-Client-Visit-FE") %>'>Assign-Reschedule
+                                                <br />
+                                                Appointment to FE</a></li>
+                                        </ul>
+                                    </li>
+                                    <li runat="server" id="menegardiv"><a><i class="fa fa-male"></i>Verify Excel<span
+                                        class="fa fa-chevron-down"> </span></a>
+                                        <ul class="nav child_menu">
+                                            <li><a href='<%=ResolveUrl("~/VerifyUploadExcel") %>'>Verify-Upload TL Excel </a>
+                                            </li>
+                                            <li><a href='<%=ResolveUrl("~/VerifyUploadExcel-MO") %>'>Verify-Upload TL Excel-MO </a>
+                                            </li>
+                                            <li><a href='<%=ResolveUrl("~/VerifyUploadExcel-PRI") %>'>Verify-Upload TL Excel-PRI
+                                            </a></li>
+                                            <li><a href='<%=ResolveUrl("~/Excel-Month-Report") %>'>DownLoad Month Wise Excel Data
+                                            </a></li>
+                                            <li><a href='<%=ResolveUrl("~/Email-SMS") %>'>Send Bulk SMS-Email </a></li>
+                                        </ul>
+                                    </li>
+                                    <li runat="server" id="reports"><a><i class="fa fa-file"></i>Master Reports<span
+                                        class="fa fa-chevron-down"> </span></a>
+                                        <ul class="nav child_menu">
+                                            <li><a href='<%=ResolveUrl("~/FEDashBoardReportMonthly-SubCatWise") %>'>Month Wise Work
+                                                <br />
+                                                (Audit Date Wise) Report Sub CatWise</a> </li>
+                                            <li><a href='<%=ResolveUrl("~/AllocationFEDashBoardReportMonthly-SubCatWise") %>'>Month
+                                                Wise Work
+                                                <br />
+                                                (Allocation Date Wise) Report Sub CatWise</a> </li>
+                                            <li><a href='<%=ResolveUrl("~/Monthly-Report") %>'>Month Wise Work
+                                                <br />
+                                                (Audit Date Wise) Report</a> </li>
+                                            <li><a href='<%=ResolveUrl("~/Monthly-Report-AllocatedDate") %>'>Month Wise Work
+                                                <br />
+                                                (Allocated Date Wise) Report</a> </li>
+                                            <li><a href='<%=ResolveUrl("~/FE-MonthWistWorkReport") %>'>FE Current Month Day
+                                                <br />
+                                                Wise Work Report</a> </li>
+                                            <li><a href='<%=ResolveUrl("~/Fe-LastDayReport") %>'>FE Current Month Last
+                                                <br />
+                                                Day Work Report</a> </li>
+                                            <li><a href='<%=ResolveUrl("~/Fe-DayWiseFeedBack") %>'>Day Wise FeedBack
+                                                <br />
+                                                Report</a> </li>
+                                            <li><a href='<%=ResolveUrl("~/Weekly-NegativeReport") %>'>Weekly Negative
+                                                <br />
+                                                Report</a> </li>
+                                            <li><a href='<%=ResolveUrl("~/Weekly-PositiveReport") %>'>Weekly Positive
+                                                <br />
+                                                Report</a> </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- /menu footer buttons -->
+                    </div>
+                </div>
+                <!-- top navigation -->
+                <div class="top_nav">
+                    <div class="nav_menu">
+                        <nav>
+              <div class="nav toggle">
+                <a id="menu_toggle" ><i class="fa fa-exchange" title="Hide or show menu"></i></a>
+              </div>
+              
+              <h4 class="pt20">
+                  <asp:LinkButton ID="lbllogout" runat="server" class="fa fa-power-off fa-1x pull-right" style="margin-right:15px;" OnClick="lbllogout_Click">LogOut
+                  </asp:LinkButton>
+                  <div class="clearfix"></div>
+                    <asp:Label ID="lbloginfrom" runat="server" class="fa fa-sign-in fa-1x pull-right" style="margin-right:15px;" >
+                   </asp:Label>
+                   </h4>
+              </nav>
+                    </div>
+                </div>
+                <!-- /top navigation -->
+                <!-- page content -->
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+                <!-- /page content -->
+                <!-- footer content -->
+                <footer>
+         <%-- <div class="pull-right">
+            Designed & Developed by <a href="http://www.gipinfosystems.com" target="_blank" >GipInfosystems Pvt. Ltd.</a>
+          </div>--%>
+          <div class="clearfix"></div>
+        </footer>
+                <!-- /footer content -->
+            </div>
+        </div>
+        <!-- jQuery -->
+        <script src="vendors/jquery/dist/jquery.min.js" type="text/javascript"></script>
+        <script src="vendors/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+        <!-- Bootstrap -->
+        <!----Custom Css--->
+        <script src="build/js/custom.min.js" type="text/javascript"></script>
+    </div>
+    <asp:HiddenField ID="hfOTPMobile" runat="server" />
+    <asp:HiddenField ID="hdfMobile" runat="server" />
+    <asp:HiddenField ID="hdfEmail" runat="server" />
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog" style="margin-top: 70px; width: 500px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="H2">
+                        OTP Verification</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="text-left">
+                        <asp:Panel ID="panemailotp" runat="server">
+                            <%--<asp:Timer ID="timerResendOTP" runat="server" Interval="30000" Enabled="False" OnTick="timerResendOTP_Tick">
+                                        </asp:Timer>--%>
+                            <div class="panel-body">
+                                <div id="diverrormessage" runat="server" visible="false">
+                                </div>
+                                <div runat="server" id="divotpmobile" class="form-group">
+                                    <label for="id">
+                                        <b class="pull-left">Mobile OTP</b></label>
+                                    <asp:TextBox ID="txtotpmobile" runat="server" CssClass="form-control" placeholder="Enter your mobile otp"
+                                        required autofocus></asp:TextBox>
+                                </div>
+                                <asp:Button ID="verifyotp" runat="server" Text="Submit" class="btn btn-primary pull-right"
+                                    OnClick="verifyotp_Click" />
+                                <button type="button" class="btn btn-default pull-right" style="margin-right: 5px;"
+                                    data-dismiss="modal">
+                                    Cancel</button>
+                                <div class="clearfix navbar-btn">
+                                </div>
+                                <%--<asp:LinkButton ID="lblresendotp" runat="server" Visible="false" Text="Resend OTP"
+                                                class="pull-right" OnClick="lblresendotp_Click"></asp:LinkButton>--%>
+                                <div class="clearfix">
+                                </div>
+                            </div>
+                        </asp:Panel>
+                    </div>
+                </div>
+                <br />
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

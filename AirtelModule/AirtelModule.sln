@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "AirtelModule", ".", "{CF839899-673D-4902-A606-951EC32EA1D2}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		ProjectReferences = "{82BFD4B4-15DD-4B70-9091-B65BEB8EC264}|BusinessLayer.dll;{C25F25B8-E21A-43D8-A087-A82294F9B656}|DataAccessLayer.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/publishrcplcrm"
+		Debug.AspNetCompiler.PhysicalPath = "..\AirtelModule\"
+		Debug.AspNetCompiler.TargetPath = "C:\Users\enjoy\Desktop\publishrcplcrm\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "true"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/publishrcplcrm"
+		Release.AspNetCompiler.PhysicalPath = "..\AirtelModule\"
+		Release.AspNetCompiler.TargetPath = "C:\Users\enjoy\Desktop\publishrcplcrm\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "true"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "8153"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "..\DataAccessLayer\DataAccessLayer.csproj", "{C25F25B8-E21A-43D8-A087-A82294F9B656}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "..\BusinessLayer\BusinessLayer.csproj", "{82BFD4B4-15DD-4B70-9091-B65BEB8EC264}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF839899-673D-4902-A606-951EC32EA1D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF839899-673D-4902-A606-951EC32EA1D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF839899-673D-4902-A606-951EC32EA1D2}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF839899-673D-4902-A606-951EC32EA1D2}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{C25F25B8-E21A-43D8-A087-A82294F9B656}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C25F25B8-E21A-43D8-A087-A82294F9B656}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C25F25B8-E21A-43D8-A087-A82294F9B656}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C25F25B8-E21A-43D8-A087-A82294F9B656}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82BFD4B4-15DD-4B70-9091-B65BEB8EC264}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82BFD4B4-15DD-4B70-9091-B65BEB8EC264}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82BFD4B4-15DD-4B70-9091-B65BEB8EC264}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82BFD4B4-15DD-4B70-9091-B65BEB8EC264}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

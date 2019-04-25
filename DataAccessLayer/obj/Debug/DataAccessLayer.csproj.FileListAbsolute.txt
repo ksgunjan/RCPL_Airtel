@@ -1,0 +1,31 @@
+C:\Users\MOHAMMAD WALI\Desktop\AirtelRCPLModule\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\MOHAMMAD WALI\Desktop\AirtelRCPLModule\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\MOHAMMAD WALI\Desktop\AirtelRCPLModule\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\Users\MOHAMMAD WALI\Desktop\AirtelRCPLModule\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+D:\WALI\AirtelRCPLModule\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\WALI\AirtelRCPLModule\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\WALI\AirtelRCPLModule\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+D:\WALI\AirtelRCPLModule\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+F:\1 current work\AirtelRCPLModule\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+F:\1 current work\AirtelRCPLModule\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+F:\1 current work\AirtelRCPLModule\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+F:\1 current work\AirtelRCPLModule\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+F:\1 current work\AirtelRCPLModule\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
+G:\AirtelRCPLModule\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+G:\AirtelRCPLModule\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+G:\AirtelRCPLModule\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+G:\AirtelRCPLModule\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+G:\Wali Software\AirtelRCPLModule\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+G:\Wali Software\AirtelRCPLModule\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+G:\Wali Software\AirtelRCPLModule\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+G:\Wali Software\AirtelRCPLModule\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+G:\Wali Software\AirtelRCPLModule\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
+F:\Current-Work\RCPL All Work Software\AirtelRCPLModule\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+F:\Current-Work\RCPL All Work Software\AirtelRCPLModule\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+F:\Current-Work\RCPL All Work Software\AirtelRCPLModule\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+F:\Current-Work\RCPL All Work Software\AirtelRCPLModule\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+F:\Current-Work\RCPL All Work Software\AirtelRCPLModule\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
+E:\Work Office\Gunjan Sir\RCPL_Airtel\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+E:\Work Office\Gunjan Sir\RCPL_Airtel\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+E:\Work Office\Gunjan Sir\RCPL_Airtel\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+E:\Work Office\Gunjan Sir\RCPL_Airtel\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
