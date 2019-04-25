@@ -158,8 +158,8 @@ public partial class MasterPage2 : System.Web.UI.MasterPage
         GenerateOTP();
         divotpmobile.Visible = true;
         SendMail s = new SendMail();
-        //s.sendSMS("9811020978", hfOTPMobile.Value);
-        s.sendSMS("9871804280", hfOTPMobile.Value);
+        s.sendSMS("9811020978", hfOTPMobile.Value);
+        //s.sendSMS("9871804280", hfOTPMobile.Value);
         ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "showPopup();", true);
     }
     protected void GenerateOTP()
