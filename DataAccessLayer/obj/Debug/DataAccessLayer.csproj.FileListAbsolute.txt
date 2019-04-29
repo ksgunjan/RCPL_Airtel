@@ -29,3 +29,4 @@ E:\Work Office\Gunjan Sir\RCPL_Airtel\DataAccessLayer\bin\Debug\DataAccessLayer.
 E:\Work Office\Gunjan Sir\RCPL_Airtel\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
 E:\Work Office\Gunjan Sir\RCPL_Airtel\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 E:\Work Office\Gunjan Sir\RCPL_Airtel\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+E:\Work Office\Gunjan Sir\RCPL_Airtel\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache

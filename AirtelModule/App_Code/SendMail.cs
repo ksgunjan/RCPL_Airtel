@@ -300,9 +300,9 @@ public class SendMail
     public void sendSMS(string _mobileNo, string _mOTP)
     {
         string StrMobile = _mobileNo;
-        // string aMob = "8287354325";
+        //string aMob = "8287354325";
         string aMob = "9811326074";
-        string strMsg = "Hello," + _mOTP + " is your OTP for sending Bulk Email/Bulk SMS.";
+        string strMsg = "Hello," + _mOTP + " is your OTP for sending Bulk Email to Airtel client.";
         string requestUristring = string.Format("http://smsgateway.spicedigital.in/MessagingGateway/MessagePush?username=DefexpoT&password=Def@1234&messageType=text&mobile={0}&senderId=MYRCPL&message=" + strMsg, StrMobile);
         HttpWebRequest myReq = (HttpWebRequest)WebRequest.Create(requestUristring);
         HttpWebResponse myResp = (HttpWebResponse)myReq.GetResponse();

@@ -39,7 +39,7 @@ public partial class MasterPage2 : System.Web.UI.MasterPage
                 category.InnerText = DtUser.Rows[0]["Category"].ToString();
                 a.Src = "ProfileImage" + "/" + DtUser.Rows[0]["ProfilePic"].ToString();
                 if (category.InnerText == "Manager")
-                {     
+                {
                     Session["Category"] = category.InnerText;
                     menucompany.Visible = false;
                     menuemail.Visible = false;
@@ -152,66 +152,5 @@ public partial class MasterPage2 : System.Web.UI.MasterPage
     {
         string url = Request.Path.Substring(Request.Path.LastIndexOf("/")).Substring(1);
         divformname.InnerText = url;
-    }
-    protected void btnbulkmailorsms_Click(object sender, EventArgs e)
-    {
-        GenerateOTP();
-        divotpmobile.Visible = true;
-        SendMail s = new SendMail();
-        s.sendSMS("9811020978", hfOTPMobile.Value);
-        //s.sendSMS("9871804280", hfOTPMobile.Value);
-        ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "showPopup();", true);
-    }
-    protected void GenerateOTP()
-    {
-        try
-        {
-            string numbers = "1234567890";
-            string characters = numbers;
-            int length = int.Parse("6");
-            string otp = string.Empty;
-            for (int i = 0; i < length; i++)
-            {
-                string character = string.Empty;
-                do
-                {
-                    int index = new Random().Next(0, characters.Length);
-                    character = characters.ToCharArray()[index].ToString();
-                } while (otp.IndexOf(character) != -1);
-                otp += character;
-            }
-            hfOTPMobile.Value = otp;
-        }
-        catch (Exception ex)
-        {
-            ex.Message.ToString();
-        }
-    }
-    protected void verifyotp_Click(object sender, EventArgs e)
-    {
-
-        if (txtotpmobile.Text != "")
-        {
-            try
-            {
-                if (hfOTPMobile.Value == txtotpmobile.Text)
-                {
-                    Response.Redirect("Bulk-Email?pg=" + hfOTPMobile.Value);
-                }
-                else
-                {
-
-                    ScriptManager.RegisterStartupScript(Page, Page.GetType(), "alert", "alert('Please enter valid otp')", true);
-                }
-            }
-            catch (Exception ex)
-            {
-                ScriptManager.RegisterStartupScript(Page, Page.GetType(), "alert", "alert('" + ex.Message + "')", true);
-            }
-        }
-        else
-        {
-            ScriptManager.RegisterStartupScript(Page, Page.GetType(), "alert", "alert('Please fill otp')", true);
-        }
     }
 }

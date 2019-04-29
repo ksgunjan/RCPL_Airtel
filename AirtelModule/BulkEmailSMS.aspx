@@ -24,6 +24,11 @@
             $('#myModal').modal('show');
         }
     </script>
+    <script type="text/javascript">
+        function showPopup1() {
+            $('#myModal1').modal('show');
+        }
+    </script>
     <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
     <script type="text/javascript">
         $(window).load(function () {
@@ -59,9 +64,12 @@
 <asp:Content ID="Content1" runat="server" ContentPlaceHolderID="ContentPlaceHolder1">
     <div id="loader">
     </div>
+    <asp:HiddenField ID="hfOTPMobile" runat="server" />
+    <asp:HiddenField ID="hdfMobile" runat="server" />
+    <asp:HiddenField ID="hdfEmail" runat="server" />
     <asp:UpdatePanel ID="updatepanel1" runat="server" UpdateMode="Conditional">
         <ContentTemplate>
-            <div class="right_col" role="main">
+            <div class="right_col" role="main" id="divSendEmail" runat="server" visible="False">
                 <div class="">
                     <div class="page-title">
                         <div class="title_left">
@@ -144,7 +152,7 @@
                     </div>
                 </div>
             </div>
-            <div id="myModal" class="modal fade">
+            <div id="myModal" class="modal fade" data-toggle="modal" data-backdrop="static" data-keyboard="false">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -157,14 +165,14 @@
                             <div class="col-sm-12">
                                 <div class="col-sm-12" id="subject" runat="server">
                                     <h4>
-                                        Subject :
+                                        Subject : *
                                     </h4>
                                     <div class="form-group">
                                         <asp:TextBox ID="txtSubject" runat="server" CssClass="form-control"></asp:TextBox></div>
                                 </div>
                                 <div class="col-sm-12 box-danger">
                                     <h4>
-                                        Message :
+                                        Message : *
                                     </h4>
                                     <div class="form-group">
                                         <asp:TextBox ID="txtsms" runat="server" CssClass="form-control" Placeholder="Enter Your Sms/Message"
@@ -206,9 +214,52 @@
         <ProgressTemplate>
             <div class="overlay">
                 <div style="z-index: 999; margin-left: 650px; margin-top: 300px; opacity: 0.3; -moz-opacity: 0.3;">
-                    <img alt="" src="~/images/loader.gif" />
+                    <img alt="" src="img/loader.gif" />
                 </div>
             </div>
         </ProgressTemplate>
     </asp:UpdateProgress>
+    <div class="modal fade" id="myModal1" data-toggle="modal" data-backdrop="static"
+        data-keyboard="false">
+        <div class="modal-dialog" style="margin-top: 70px; width: 500px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">
+                        OTP Verification</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="text-left">
+                        <asp:Panel ID="panemailotp" runat="server">
+                            <%--<asp:Timer ID="timerResendOTP" runat="server" Interval="30000" Enabled="False" OnTick="timerResendOTP_Tick">
+                                        </asp:Timer>--%>
+                            <div class="panel-body">
+                                <div id="diverrormessage" runat="server" visible="false">
+                                </div>
+                                <div runat="server" id="divotpmobile" class="form-group">
+                                    <label for="id">
+                                        <b class="pull-left">Mobile OTP</b></label>
+                                    <asp:TextBox ID="txtotpmobile" runat="server" CssClass="form-control" placeholder="Enter your mobile otp"
+                                        required autofocus></asp:TextBox>
+                                </div>
+                                <asp:Button ID="verifyotp" runat="server" Text="Submit" class="btn btn-primary pull-right"
+                                    OnClick="verifyotp_Click" />
+                                <button type="button" class="btn btn-default pull-right" style="margin-right: 5px;"
+                                    data-dismiss="modal">
+                                    Cancel</button>
+                                <div class="clearfix navbar-btn">
+                                </div>
+                                <%--<asp:LinkButton ID="lblresendotp" runat="server" Visible="false" Text="Resend OTP"
+                                                class="pull-right" OnClick="lblresendotp_Click"></asp:LinkButton>--%>
+                                <div class="clearfix">
+                                </div>
+                            </div>
+                        </asp:Panel>
+                    </div>
+                </div>
+                <br />
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
 </asp:Content>

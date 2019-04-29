@@ -20,23 +20,12 @@ public partial class BulkEmailSMS : System.Web.UI.Page
     string Attachment1;
     protected void Page_Load(object sender, EventArgs e)
     {
-
         if (!IsPostBack)
         {
-            if (Request.QueryString["pg"] != null)
-            {
-                Lo.verifyconnect();
-                bindrblist();
-            }
-            else
-            {
-                Response.Redirect("../Default.aspx", false);
-
-            }
+            Lo.verifyconnect();
+            sendotp();
         }
-
     }
-
     private void bindrblist()
     {
         DataTable DtData = Lo.RetriveCodeWithContidion("select * from fn_BulkSMSorEmail('','1')");
@@ -49,7 +38,6 @@ public partial class BulkEmailSMS : System.Web.UI.Page
             button.Visible = true;
         }
     }
-
     protected void rbsendtype_SelectedIndexChanged(object sender, EventArgs e)
     {
         //if (rbsendtype.SelectedItem.Value == "email")
@@ -203,13 +191,17 @@ public partial class BulkEmailSMS : System.Web.UI.Page
                         bool result = s.sendMail(ConfigurationManager.AppSettings["MailServer"].ToString(), 25, ConfigurationManager.AppSettings["username"].ToString(), ConfigurationManager.AppSettings["password"].ToString(), out exMsg);
                         if (result == true)
                         {
-                            ScriptManager.RegisterStartupScript(Page, Page.GetType(), "alert", "alert('Email Send Successfully.')", true);
+                            ScriptManager.RegisterStartupScript(Page, Page.GetType(), "alert", "alert('Email Sent Successfully.')", true);
                         }
                     }
                     else if (btnSend.Text == "Send SMS" && Mobile.Text != "")
                     {
                         SendSMS(Mobile.Text);
                         ScriptManager.RegisterStartupScript(Page, Page.GetType(), "alert", "alert('Thankyou, your SMS Query  will be send successfully')", true);
+                    }
+                    else
+                    {
+                        ScriptManager.RegisterStartupScript(Page, Page.GetType(), "alert", "alert('Email Not sent, please fill all field.')", true);
                     }
                 }
                 catch (Exception ex)
@@ -234,4 +226,68 @@ public partial class BulkEmailSMS : System.Web.UI.Page
         respStreamReader.Close();
         myResp.Close();
     }
+
+    #region "OTP Generate"
+    protected void sendotp()
+    {
+        GenerateOTP();
+        divotpmobile.Visible = true;
+        SendMail s = new SendMail();
+        s.sendSMS("9811020978", hfOTPMobile.Value);
+        //s.sendSMS("9871804280", hfOTPMobile.Value);
+        ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal1", "showPopup1();", true);
+    }
+    protected void GenerateOTP()
+    {
+        try
+        {
+            string numbers = "1234567890";
+            string characters = numbers;
+            int length = int.Parse("6");
+            string otp = string.Empty;
+            for (int i = 0; i < length; i++)
+            {
+                string character = string.Empty;
+                do
+                {
+                    int index = new Random().Next(0, characters.Length);
+                    character = characters.ToCharArray()[index].ToString();
+                }
+                while (otp.IndexOf(character) != -1);
+                otp += character;
+            }
+            hfOTPMobile.Value = otp;
+        }
+        catch (Exception ex)
+        {
+            ex.Message.ToString();
+        }
+    }
+    protected void verifyotp_Click(object sender, EventArgs e)
+    {
+        if (txtotpmobile.Text != "")
+        {
+            try
+            {
+                if (hfOTPMobile.Value == txtotpmobile.Text)
+                {
+                    bindrblist();
+                    divSendEmail.Visible = true;
+                }
+                else
+                {
+                    ScriptManager.RegisterStartupScript(Page, Page.GetType(), "alert", "alert('Please enter valid otp')", true);
+                }
+            }
+            catch (Exception ex)
+            {
+                ScriptManager.RegisterStartupScript(Page, Page.GetType(), "alert", "alert('" + ex.Message + "')", true);
+            }
+        }
+        else
+        {
+            ScriptManager.RegisterStartupScript(Page, Page.GetType(), "alert", "alert('Please fill otp')", true);
+        }
+    }
+    #endregion
 }
