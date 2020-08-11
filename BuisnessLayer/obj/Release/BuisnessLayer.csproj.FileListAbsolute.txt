@@ -1,0 +1,13 @@
+F:\NewRCPLAIREL\BuisnessLayer\bin\Release\BuisnessLayer.dll
+F:\NewRCPLAIREL\BuisnessLayer\bin\Release\BuisnessLayer.pdb
+F:\NewRCPLAIREL\BuisnessLayer\bin\Release\DataAccessLayer.dll
+F:\NewRCPLAIREL\BuisnessLayer\bin\Release\Microsoft.Practices.EnterpriseLibrary.Data.dll
+F:\NewRCPLAIREL\BuisnessLayer\bin\Release\Microsoft.Practices.EnterpriseLibrary.Common.dll
+F:\NewRCPLAIREL\BuisnessLayer\bin\Release\Microsoft.Practices.Unity.dll
+F:\NewRCPLAIREL\BuisnessLayer\bin\Release\Microsoft.Practices.Unity.Interception.dll
+F:\NewRCPLAIREL\BuisnessLayer\bin\Release\DataAccessLayer.pdb
+F:\NewRCPLAIREL\BuisnessLayer\obj\Release\BuisnessLayer.dll
+F:\NewRCPLAIREL\BuisnessLayer\obj\Release\BuisnessLayer.pdb
+F:\NewRCPLAIREL\BuisnessLayer\obj\Release\BuisnessLayer.csprojAssemblyReference.cache
+F:\NewRCPLAIREL\BuisnessLayer\obj\Release\BuisnessLayer.csproj.CoreCompileInputs.cache
+F:\NewRCPLAIREL\BuisnessLayer\obj\Release\BuisnessLayer.csproj.CopyComplete

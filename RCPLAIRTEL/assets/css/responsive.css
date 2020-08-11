@@ -1,0 +1,99 @@
+@media (max-width: 767px) {
+  /* left-sidebar toggler
+        ---------------------------------------------------------------------------------------------- */
+  .left-sidebar {
+    height: 100%;
+    min-height: 100%;
+    position: absolute;
+    left: -292px;
+  }
+  .content {
+    margin-left: 0 !important;
+    padding: 10px;
+  }
+  .left-sidebar,
+  .content {
+    -webkit-transition: 500ms ease;
+    -moz-transition: 500ms ease;
+    -o-transition: 500ms ease;
+    -ms-transition: 500ms ease;
+    transition: 500ms ease;
+  }
+  h3.panel-title {
+    font-size: 12px;
+    font-weight: 200;
+  }
+  .left-sidebar.show-fullsidebar {
+    height: 100%;
+    width: 100% !important;
+    z-index: 10000;
+    min-height: 100%;
+    position: absolute;
+    left: 0px;
+  }
+  .nav-input-search {
+    width: 120px;
+  }
+  .btn-nav-toggle {
+    display: none;
+  }
+  .navbar .btn-nav-toggle-responsive {
+    background: none;
+    border-color: #e0e0e0;
+    border-radius: 0px;
+    color: #FFFFFF;
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+/*----Shiv---------*/
+ .main-logo {
+    font-size: 34px !important;
+    margin-left: 10px;
+    
+  }
+  .loginBg { width: 90% !important;}
+  .navbar-header .navbar-brand { display: flex; align-items: center;}
+  .btn-nav-toggle-responsive {cursor: pointer;}
+  .slide-leftbar { left: 0 !important;}
+  .navbar .user-menu { margin-right: 0;}
+  .add-inflow-tab ul li a { padding: 10px 52px; display: block; }
+  .add-inflow-tab { width: 100%; float: left}
+  #btnCaptchaNew { right: -8px; top: -37px;}
+
+  .fdi-tab ul { flex-direction: column;}
+  .is-flex { flex-direction: column;}
+  #ContentPlaceHolder1_Intrested, #ContentPlaceHolder1_MenuAlot, #ContentPlaceHolder1_divRole { margin-right: 0;}
+
+  ul.breadcrumb { display: none;}
+  .tabing-section .nav { display: flex; flex-direction: column; text-align: center;}
+  .sideBg { padding-top: 30px;}
+
+
+}
+
+
+/*--- For Tab Device ----*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .main-logo {
+    font-size: 34px !important;
+    margin-left: 10px;
+    
+  }
+  .loginBg { width: 40% !important;}
+  .navbar-header .navbar-brand { display: flex; align-items: center;}
+  .btn-nav-toggle-responsive {cursor: pointer;}
+  .slide-leftbar { left: 0 !important;}
+  .navbar .user-menu { margin-right: 0;}
+  .add-inflow-tab ul li a { padding: 10px 52px; }
+  .add-inflow-tab { width: 100%; float: left}
+
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .add-inflow-tab ul li a {
+        padding: 10px 20px;
+  }
+ }

@@ -1,0 +1,11 @@
+F:\NewRCPLAIREL\DataAccessLayer\bin\Release\DataAccessLayer.dll
+F:\NewRCPLAIREL\DataAccessLayer\bin\Release\DataAccessLayer.pdb
+F:\NewRCPLAIREL\DataAccessLayer\bin\Release\Microsoft.Practices.EnterpriseLibrary.Common.dll
+F:\NewRCPLAIREL\DataAccessLayer\bin\Release\Microsoft.Practices.EnterpriseLibrary.Data.dll
+F:\NewRCPLAIREL\DataAccessLayer\bin\Release\Microsoft.Practices.Unity.dll
+F:\NewRCPLAIREL\DataAccessLayer\bin\Release\Microsoft.Practices.Unity.Interception.dll
+F:\NewRCPLAIREL\DataAccessLayer\obj\Release\DataAccessLayer.dll
+F:\NewRCPLAIREL\DataAccessLayer\obj\Release\DataAccessLayer.pdb
+F:\NewRCPLAIREL\DataAccessLayer\obj\Release\DataAccessLayer.csproj.CoreCompileInputs.cache
+F:\NewRCPLAIREL\DataAccessLayer\obj\Release\DataAccessLayer.csproj.CopyComplete
+F:\NewRCPLAIREL\DataAccessLayer\obj\Release\DataAccessLayer.csprojAssemblyReference.cache
